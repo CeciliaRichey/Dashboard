@@ -1,5 +1,6 @@
 app.controller('MainController', ['$scope', function($scope) { 
-  $scope.health = 
+  $scope.username = "Cecilia Richey";
+  $scope.health =
     [ 
   { 
     username: 'Cecilia', 
@@ -109,7 +110,7 @@ app.controller('MainController', ['$scope', function($scope) {
     arrhythmia: 'none',
     oxygen: 98,
     hydration: 84,
-    location: "home"
+    location: "home",
     symptoms: ["shortness of breath"],
     notes: 'none'
   }, 
@@ -127,7 +128,7 @@ app.controller('MainController', ['$scope', function($scope) {
     symptoms: [],
     notes: ""
   }, 
-],
+];
   $scope.someFormula = function(index) { 
     $scope.health += 1; 
 };

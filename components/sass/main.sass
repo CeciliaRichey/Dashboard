@@ -1,22 +1,28 @@
 //Naming system
 
-/* Utility */
-.u-utilityName {}
+/// Utility //
+//.u-utilityName {}
 
-/* Component */
-.ComponentName {}
+/// Component //
+//.ComponentName {}
 
-/* Component modifier */
-.ComponentName--modifierName {}
+/// Component modifier //
+//.ComponentName--modifierName {}
 
-/* Component descendant */
-.ComponentName-descendant {}
+/// Component descendant //
+//.ComponentName-descendant {}
 
-/* Component descendant modifier */
-.ComponentName-descendant--modifierName {}
+/// Component descendant modifier //
+//.ComponentName-descendant--modifierName {}
 
-/* Component state (scoped to component) */
-.ComponentName.is-stateOfComponent {}
+// Component state (scoped to component) //
+//.ComponentName.is-stateOfComponent {}
+// or .btn {
+//   &:hover,
+//   &:focus { }
+
+//   &:active { }
+// }
 
 
 
@@ -50,6 +56,8 @@ a, a:hover, a:focus
 	background: $red
 	color: #fff
 
+.row
+	margin: 0 0
 
 .accordion-heading .accordion-toggle
 	display: block
@@ -64,7 +72,7 @@ a, a:hover, a:focus
 	text-decoration: none
 
 
-/*Helpers
+//Helpers
 
 .centered
 	text-align: center
@@ -112,7 +120,7 @@ ul.top-menu > li > .logout
 
 
 
-/*sidebar navigation
+//sidebar navigation
 
 #sidebar
 	width: 210px
@@ -141,7 +149,7 @@ ul.sidebar-menu
 	margin: 73px 0 0
 	padding: 0
 	li 
-		/*line-height: 20px !important
+		//line-height: 20px !important
 		margin-bottom: 5px
 		margin-left: 10px
 		margin-right: 10px
@@ -219,11 +227,14 @@ ul.sidebar-menu
 //MAIN CONTENT CONFIGURATION 
 #main-content
 	margin-left: 210px
+	padding-top: 75px
+	padding-left: 20px
 
 
 .header, .footer
 	min-height: 60px
-	padding: 0 15px
+	padding: 0 15px 15px
+	background-color: #fff
 
 
 .header
@@ -231,6 +242,7 @@ ul.sidebar-menu
 	left: 0
 	right: 0
 	z-index: 1002
+	margin-bottom: 75px
 
 
 .black-bg
@@ -240,7 +252,6 @@ ul.sidebar-menu
 
 .wrapper
 	display: inline-block
-	margin-top: 60px
 	padding-left: 15px
 	padding-right: 15px
 	padding-bottom: 15px
@@ -263,7 +274,7 @@ a.logo
 		color: #68dff0
 
 
-/*notification
+//notification
 #top_menu .nav > li, ul.top-menu > li
 	float: left
 
@@ -448,7 +459,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus
 	border-bottom-color: #68dff0 !important
 	border-top-color: #68dff0 !important
 
-/*--sidebar toggle---
+//--sidebar toggle---
 
 .sidebar-toggle-box
 	float: left
@@ -472,8 +483,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus
 //LINE ICONS CONFIGURATION 
 
 .mtbox
-	margin-top: 80px
-	margin-bottom: 40px
+	margin-top: 40px
 
 
 .box1
@@ -502,28 +512,25 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus
 
 
 //MAIN CHART CONFIGURATION 
-.main-chart
-	padding-top: 20px
+.stats
+	padding: 20px 0 0 0
 
 .border-head h3
 	margin-top: 20px
 	margin-bottom: 20px
 	margin-left: 15px	
 	padding-bottom: 5px
-	font-weight: normal
-	font-size: 18px
 	display: inline-block
 	width: 100%
-	font-weight: 700
-	color: #333333
 
 
 .custom-bar-chart
 	height: 290px
 	margin-top: 20px
-	margin-left: 20px
 	position: relative
 	border-bottom: 1px solid #c9cdd7
+	ul
+		padding: 15px
 	.bar
 		height: 100%
 		position: relative
@@ -569,10 +576,23 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus
 			border-top: none
 		span
 			display: block
-			margin: -10px 0 0 -60px
-			padding: 0 10px
+			margin: -10px 0 0
 			width: 40px
 
+.angular-chartjs-line-chart, .chartjs-line-chart
+	height: 290px
+	cursor: url('http://ionicframework.com/img/finger.png'), auto
+
+.select-metrics
+	margin-top: 40px
+	label
+		display: block
+		margin-top: 20px
+
+
+.spinner svg
+	width: 19%
+	height: 85px
 
 @font-face
 	font-family: 'linecons'

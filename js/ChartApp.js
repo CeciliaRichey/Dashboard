@@ -1,0 +1,1 @@
+var chart = angular.module("ChartApp", []);

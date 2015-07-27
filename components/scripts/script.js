@@ -1,8 +1,4 @@
-var Script;
-
-jQuery(document).ready(function($) {});
-
-Script = (function() {
+(function() {
   jQuery('#sidebar .sub-menu > a').click(function() {
     var diff, o, responsiveView;
     o = $(this).offset();
