@@ -31,50 +31,26 @@
                           %ul.dropdown-menu.extended.tasks-bar 
                               %div.notify-arrow.notify-arrow-green 
                               %li 
-                                %p.green You have 4 pending tasks  
+                                %p.green You have 2 timestamps to review
                               %li 
                                 %a(href="index.html")
-                                  %div.task-info 
-                                    %div.desc DashGum Admin Panel
-                                    %div.percent 40%  
-                                  %div.progress progress-striped 
-                                    %div.progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40% 
-                                      %span.sr-only 40% Complete (success)
+                                  %div.desc Sep 21, 5:30pm
+                                    %div.loc At Work
                               %li 
                                 %a(href="index.html")
-                                  %div.task-info 
-                                    %div.desc Database Update
-                                    %div.percent 60%
-                                  %div.progress progress-striped 
-                                    %div.progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60% 
-                                      %span.sr-only 60% Complete (warning)
-                              %li 
-                                %a(href="index.html")
-                                  %div.task-info 
-                                    %div.desc Product Development
-                                    %div.percent 80%
-                                  %div.progress progress-striped 
-                                    %div.progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80% 
-                                      %span.sr-only 80% Complete
-                              %li 
-                                %a(href="index.html")
-                                  %div.task-info 
-                                    %div.desc Payments Sent
-                                    %div.percent 70%
-                                  %div.progress.progress-striped 
-                                    %div(role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%").progress-bar.progress-bar-danger
-                                        %span.sr-only 70% Complete (Important)
+                                  %div.desc Sep 21, 5:30pm
+                                    %div.loc At Work      
                               %li.external 
-                                %a(href="#") See All Tasks
+                                %a(href="#") See All Timestamps
                       /inbox dropdown
                       %li#header_inbox_bar.dropdown 
                           %a(data-toggle="dropdown" href="index.html").dropdown-toggle
                               %i.fa.fa-envelope-o 
-                              %span.badge.bg-theme 5
+                              %span.badge.bg-theme 1
                           %ul.dropdown-menu extended inbox 
                               %div.notify-arrow.notify-arrow-green 
                               %li 
-                                %p.green You have 5 new messages
+                                %p.green You have 1 new message
                               %li 
                                 %a(href="index.html")
                                   %span.photo" 
@@ -166,11 +142,26 @@
                       %h3 OK!
                       %p Your server is working perfectly. Relax & enjoy.
                     /CUSTOM CHART
+              %div.row.col-lg-9.zoom
+                %h3.col-lg-4 Zoomable History
+                %div.col-lg-2.dropdown.goright
+                  %button.btn.btn-default.dropdown-toggle(type="button" data-toggle="dropdown") Timeframe
+                  %span.caret
+                  %ul.dropdown-menu.dropdown-menu-right
+                    %li
+                      %a.sixMonths(href="#") Last 6 Months
+                    %li
+                      %a(href="#").thisMonth This Month
+                    %li
+                      %a(href="#").thisWeek This Week
+                    %li
+                      %a(href="#").today Today
+                %div.col-lg-9#chartContainer(style="height: 500px; width: 100%;")
               %div.row.border-head(ng-Controller="ChartController")
                 %h3 History with Timestamps
                 %div.col-lg-9
                   %div.dropdown.goright
-                    %button.btn.btn-default.dropdown-toggle(type="button" data-toggle="dropdown") Timeframe
+                    %button.btn.btn-default.dropdown-toggle(type="button" data-toggle="dropdown" ng-model="timeframe") Timeframe
                     %span.caret
                     %ul.dropdown-menu.dropdown-menu-right
                       %li
@@ -181,6 +172,7 @@
                         %a(href="#") This Week
                       %li
                         %a(href="#") Today
+                  %h3 Timeframe: {{timeframe}}
                   %canvas#line.chart.chart-line.angular-chartjs-line-chart.col-lg-6(data="data" labels="labels" legend="true" series="series" options="options")
                 %form.col-lg-2.select-metrics
                   %label(ng-repeat="metric in metrics")
@@ -241,6 +233,8 @@
   /js placed at the end of the document so the pages load faster
   %script(src="js/angular.js")
   %script(src="https://code.jquery.com/jquery-1.8.3.js")
+  %script(src="/js/canvasjs.min.js")
+  %script(src="/js/ZoomChart.js")
   %script(src="/js/Chart.js")
   %script(src="/js/angular-chart.js")
   %script(src="/js/bootstrap.min.js")

@@ -34,6 +34,7 @@ do ->
   #    tool tips
   $('[data-toggle="tooltip"]').tooltip()
 
+
   # data = 
   #   labels: [
   #     'January'
